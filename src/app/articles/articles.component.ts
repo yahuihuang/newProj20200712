@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 export class ArticlesComponent implements OnInit {
   // data$: Observable<Article[]>;
   @Input() data$: Observable<Article[]>;
+  @Input() list: Article[];
 
   constructor() {
 

@@ -6,6 +6,10 @@
     </ul>
   </div>
 
+  <div class="post-preview" *ngFor="let item of list;">
+    <h1>{{ item.title }}</h1>
+  </div>
+
   <div class="post-preview" *ngFor="let item of data$|async;">
     <div class="post-meta">
       <a href="profile.html">

@@ -19,8 +19,8 @@ export class HeaderComponent implements OnInit {
 
   searchAction(event: MouseEvent): void {
     console.log(event);
+    this.searchWord.emit(this.keyWord);
     if (event.altKey === true) {
-      this.searchWord.emit(this.keyWord);
       this.isHighlight = true;
       this.fontSize += 2;
     }
