@@ -4,11 +4,11 @@ import { Article } from './Article';
 import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-argicles',
-  templateUrl: './argicles.component.html',
-  styleUrls: ['./argicles.component.css']
+  selector: 'app-articles',
+  templateUrl: './articles.component.html',
+  styleUrls: ['./articles.component.css']
 })
-export class ArgiclesComponent implements OnInit {
+export class ArticlesComponent implements OnInit {
   data$: Observable<Article[]>;
 
   constructor(private datasvc: DataService) {
