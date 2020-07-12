@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Output() searchWord = new EventEmitter<string>();
   keyWord = '';
+  counter = 0;
   isHighlight = false;
   fontSize = 24;
 
@@ -23,5 +24,11 @@ export class HeaderComponent implements OnInit {
       this.isHighlight = true;
       this.fontSize += 2;
     }
+  }
+
+  keywordInput(event: InputEvent): void {
+    // console.log(event);
+    console.log('counter: ' + (event.target as HTMLButtonElement).value);
+    this.counter = +((event.target as HTMLButtonElement).value) + 1;
   }
 }
