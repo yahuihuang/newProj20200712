@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnInit, Input } from '@angular/core';
 import { Article } from './Article';
-import { DataService } from '../data.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-articles',
@@ -9,13 +9,18 @@ import { DataService } from '../data.service';
   styleUrls: ['./articles.component.css']
 })
 export class ArticlesComponent implements OnInit {
-  data$: Observable<Article[]>;
+  // data$: Observable<Article[]>;
+  @Input() data$: Observable<Article[]>;
 
+  constructor() {
+
+  }
+  /*
   constructor(private datasvc: DataService) {
     this.data$ = this.datasvc.load();
 
     console.table(this.data$);
-   }
+   }*/
 
   ngOnInit(): void {
   }
