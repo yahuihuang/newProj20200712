@@ -11,7 +11,7 @@ export class AppComponent {
   mySearchWord = '';
 
   searchWordAction(searchWord: string): void {
-    alert('取得搜尋字串: ' + searchWord);
+    console.log('取得搜尋字串: ' + searchWord);
     this.mySearchWord = searchWord;
   }
 }

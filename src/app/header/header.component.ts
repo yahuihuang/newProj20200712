@@ -8,13 +8,20 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Output() searchWord = new EventEmitter<string>();
   keyWord = '';
+  isHighlight = false;
+  fontSize = 24;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  searchAction($event): void {
-    console.log($event);
-    this.searchWord.emit(this.keyWord);
+  searchAction(event: MouseEvent): void {
+    console.log(event);
+    if (event.altKey === true) {
+      this.searchWord.emit(this.keyWord);
+      this.isHighlight = true;
+      this.fontSize += 2;
+    }
   }
 }
