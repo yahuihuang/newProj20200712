@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { ArgiclesComponent } from './argicles/argicles.component';
 import { TagsComponent } from './tags/tags.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

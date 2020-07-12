@@ -32,3 +32,4 @@ export class HeaderComponent implements OnInit {
     this.counter = +((event.target as HTMLButtonElement).value) + 1;
   }
 }
+

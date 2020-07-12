@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Article } from './Article';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-argicles',
@@ -6,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./argicles.component.css']
 })
 export class ArgiclesComponent implements OnInit {
+  data$: Observable<Article[]>;
 
-  constructor() { }
+  constructor(private datasvc: DataService) {
+    this.data$ = this.datasvc.load();
+
+    console.table(this.data$);
+   }
 
   ngOnInit(): void {
   }
