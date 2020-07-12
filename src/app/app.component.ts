@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = '這是標題';
   subtitle = 'A place to share your <u class="knowledge">knowledge</u>.';
+
+  searchWordAction(searchWord: string): void {
+    alert('取得搜尋字串: ' + searchWord);
+  }
 }
